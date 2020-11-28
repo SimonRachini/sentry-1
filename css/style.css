@@ -1,0 +1,37 @@
+/* BASIC PRESET STYLES....DO NOT EDIT. SCROLL BELOW TO THE END OF PRESET STYLES TO ADD YOUR CSS */
+:root {
+  --primary-color: #293242;
+  --light-bg: #f4f4f4
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin: .5rem 0;
+}
+
+/* THE END OF PRESET STYLES...YOU CAN EDIT FROM BELOW */
+
+
+/* HEADER - NAVBAR -- ADD YOUR CSS HERE*/
