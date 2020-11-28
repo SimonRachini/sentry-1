@@ -1,7 +1,7 @@
 /* BASIC PRESET STYLES....DO NOT EDIT. SCROLL BELOW TO THE END OF PRESET STYLES TO ADD YOUR CSS */
 :root {
   --primary-color: #293242;
-  --light-bg: #f4f4f4
+  --light-bg: #f4f4f4;
 }
 
 * {
@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 a {
@@ -28,10 +28,76 @@ img {
 }
 
 p {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
+}
+
+/* PRESET USED ON HEADER --AND OTHER CONTAINERS */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
 }
 
 /* THE END OF PRESET STYLES...YOU CAN EDIT FROM BELOW */
 
-
 /* HEADER - NAVBAR -- ADD YOUR CSS HERE*/
+#main-nav {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#main-nav .container {
+  display: grid;
+  grid-template-columns: 6fr 3fr;
+  padding: 1rem;
+}
+
+#main-nav .logo {
+  width: 90px;
+}
+
+#main-nav ul {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  /* text-align: center; */
+}
+
+#main-nav ul li a {
+  padding: 0.75rem;
+  font-weight: bold;
+  margin-left: 2.5rem;
+}
+
+#main-nav ul li a.current {
+  border-bottom: 4px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+#main-nav ul li a:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+/* MEDIA QUERIES -- ALL MEDIA QUERIES SHOULD BE AT BOTTOM */
+
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  #main-nav .container {
+    grid-template-columns: 1fr;
+  }
+
+  #main-nav .logo,
+  #main-nav ul {
+    justify-self: center;
+  }
+
+  #main-nav ul li a {
+    padding: 0.5rem;
+    margin-left: 0;
+  }
+}
