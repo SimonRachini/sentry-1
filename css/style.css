@@ -83,6 +83,18 @@ p {
   transition: all 0.5s ease-in-out;
 }
 
+/* FOOTER */
+#footer {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+#footer p {
+  padding: 1rem;
+  text-align: center;
+  font-size: small;
+}
+
 /* MEDIA QUERIES -- ALL MEDIA QUERIES SHOULD BE AT BOTTOM */
 
 @media screen and (max-width: 768px) {
@@ -100,4 +112,10 @@ p {
     padding: 0.5rem;
     margin-left: 0;
   }
+
+  /* FOOTER */
+  #footer p {
+    font-size: smaller;
+  }
+  
 }
