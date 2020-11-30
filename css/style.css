@@ -216,7 +216,8 @@ p {
   padding: .2rem;
 }
 
-.contact-container .contact-form input:last-child {
+.contact-container .contact-form input:last-child,
+.new-room-form input:last-child {
   margin-top: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -406,6 +407,40 @@ float: left;
    color: white;
    transition: all .5s ease-in-out;
  }
+
+ /* NEW ROOM */
+ #new-room .new-room-form {
+   max-width: 500px;
+   margin-left: 25%;
+ }
+
+ #new-room .new-room-form h2{
+   margin: 1rem 0;
+ }
+
+ .new-room-form label {
+   display: block;
+   font-weight: bold;
+   margin-top: 1rem;
+   margin-bottom: .5rem;
+ }
+
+ .new-room-form input {
+   width: 100%;
+   border: 1px solid rgb(172, 166, 166);
+   padding: .5rem;
+ }
+
+.new-room-form .new-device-icon {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.new-room-form .new-device-icon p{
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
 
 /* FOOTER */
 #footer {
