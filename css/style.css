@@ -408,6 +408,181 @@ float: left;
    transition: all .5s ease-in-out;
  }
 
+/*login.html, Register.html*/
+	
+	div.left-login {
+     
+		z-index: 1000;
+		 background: #293242;
+		  position: fixed;
+		   margin-left:-30px;
+		     padding:50px 0;
+		 float: left;
+		 width: 45%;
+		height: 100%;
+		color: white;
+		 text-align:center;
+
+  
+
+  list-style-type: none;
+
+    }
+	div.right-login {
+	position: fixed ; 
+	margin-left:45%;
+	padding:2px 16px;
+	background: white;
+	color: black;
+	width: 40%;
+	height: 600px;
+    }
+	div.login-form {
+	max-width: 100%;
+   margin-left: 5%;
+    }
+
+	h1[type = "h1-left-login"] {
+  
+  height: 600px  
+  font-size: 50px;
+  }
+  h1[type = "h1-right-login"] {
+   display: block;
+  font-size: 36px;
+  text-indent: 10px
+  }
+
+  h2[type = "h2-left-login"] {
+  display: block;
+  height: 400px  
+  font-size: 50px;
+  }
+  h2[type = "h2-right-login"]{
+ 
+  }
+button[type = Login]{
+	
+	width: 130px;
+	height: 58px;
+	background-color: white;
+	color: black;
+	border: none;
+	}
+
+
+
+
+input[type = f_name] {
+	    
+		width: 145px;
+        height: 33px;
+		padding: .5rem;
+      }
+input[type = l_name] {
+	    position: fixed;
+		width: 145px;
+        height: 33px;
+		padding: .5rem;
+      }
+ 
+input[type = email] {  
+		display: block;
+		width: 295px;
+		height: 33px;
+		 padding: .5rem;
+      }
+input[type = password ] {  
+		display: block;
+		width: 295px;
+		height: 33px;
+		  padding: .5rem;
+ }   
+label[type = f_name ] {	
+		display: block;
+		width: 130px;
+		height: 28px;
+		padding: .5rem;	
+   
+     }  
+	  label[type = email ] {
+		display: block;
+		width: 165px;
+		height: 28px;
+		  padding: .5rem;
+      }  
+	   label[type = password ] {		
+		width: 110px;
+		height: 28px;
+		  padding: .5rem;
+      }  
+	  label[type = psw-repeat ] {
+		width: 300px;
+		height: 28px;
+      }
+	   button[type = submit ] {
+		width: 126px;
+		height: 66px;
+		
+		background-color: #293242;
+	    color: #FFFFFF
+      }   
+
+
+/*End of Login, Registration.html*/
+/*Setting.html*/
+ #set-profile .set-profile-form {
+   max-width: 500px;
+   margin-left: 25%;
+ }
+
+ #new-room .set-profile-form h2{
+   margin: 1rem 0;
+ }
+
+ .set-profile-form label {
+   display: block;
+   font-weight: bold;
+   margin-top: 1rem;
+   margin-bottom: .5rem;
+ }
+
+ .set-profile-form input {
+   width: 100%;
+   border: 1px solid rgb(172, 166, 166);
+   padding: .5rem;
+ }
+
+ .set-profile-form input[type = "name"] {
+   width: 49.5%;
+   border: 1px solid rgb(172, 166, 166);
+   padding: .5rem;
+ }
+  .set-profile-form input[type = "submit"] {
+  
+   width: 130px;
+height: 58px;
+ 
+   border: 1px solid rgb(172, 166, 166);
+   padding: .5rem;
+ }
+
+
+
+
+
+/*End of Setting.html*/
+
+
+
+
+
+
+
+
+
+
+
  /* NEW ROOM */
  #new-room .new-room-form {
    max-width: 500px;
