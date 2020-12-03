@@ -575,9 +575,263 @@ height: 58px;
 
 
 
+ /* ROOM PAGE*/
+
+.module3{
+	margin-left:27%;
+	padding:2px 16px;
+    height: 290px; 
+}
+
+.module1{
+	margin-left:27%;
+	padding:2px 16px;
+    height: 200px; 
+}
+
+.module3 span
+{
+  display:block;
+}
+
+.module1 span
+{
+  display:block;
+}
+
+
+.module3 div.photo{
+margin-left: 10px;
+display: inline-block;
+width: 50px;
+}
+
+
+.module1 div.photo{
+margin-left: 10px;
+display: inline-block;
+width: 50px;
+}
+
+.module3 div.intro{
+display: inline-block;
+}
+
+
+.module1 div.intro{
+display: inline-block;
+}
+
+.module3 ul.list{
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.module1 ul.list{
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.module3 div.photo img{
+  display: block;
+  background-position:top right;
+  left: 0;
+  top:0;
+  width: 50px;
+  height: 50px;
+  
+}
+
+.module1 div.photo img{
+  display: block;
+  background-position:top right;
+  left: 0;
+  top:0;
+  width: 50px;
+  height: 50px;
+  
+}
+
+
+.module3 div.img{
+    margin: 6px;
+ 
+    border: 5px solid black;
+    border-radius:12px;
+    float: left;
+	 width: 243px;
+	 height:153px;
+   
+}
+
+
+.module3 div.img1{
+    margin: 8px;
+    border: 5px solid black; 
+    float: left;
+	width: 177px;
+	height: 102px;
+	 
+   
+}
 
 
 
+.module1 div.img1{
+    margin: 8px;
+    border: 5px solid black; 
+    float: left;
+	width: 177px;
+	height: 102px;
+	 
+   
+}
+
+div.img:hover{
+   border: 5px solid #ccc;
+   background-color:#293242;
+   color: white;
+ }
+
+div.img1:hover{
+   border: 5px solid #ccc;
+   background-color:#293242;
+   color: white;
+ }
+
+.logoKitchen{
+position:relative;
+background:url(../images/kitchen.png);
+background-repeat:no-repeat;
+width:  50px ; 
+height: 50px; 
+top:5px;
+left:5px;
+}
+
+ 
+div.img:hover .logoKitchen{
+background:url(../images/kitchen_hovered.png);
+background-repeat:no-repeat;
+width: 50px ;
+height: 50px; 
+}
+
+
+div.img:hover .sensortype{
+color: white;
+}
+
+div.img1:hover .sensortype{
+color: white;
+}
+
+div.img:hover .status{
+color: white;
+}
+
+div.img1:hover .status{
+color: white;
+}
+
+.sensortype{
+
+position:relative;
+width: 148px;
+height: 82px;
+
+height: 30px;
+left: 89px;
+top: -50px;
+
+font-family: Karla;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+
+color: #000000;
+
+
+}
+
+.status{
+	position: relative;
+	width: 172px;
+	height: 30px;
+	left: 16px;
+	top: 22px;
+	font-family: Karla;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: #000000;
+
+
+}
+
+.module1 div.img img{
+  width: 50%;
+  height: 50%;javascript:void(0);
+  display: block;
+  margin: auto;
+}
+
+.module1 div.desc {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.module1 div.conte { 
+    font-size: 26px;
+    font-weight: bold;
+    float: center;
+	font-family: Karla;
+	font-style: normal;
+	text-align: center;
+	padding:5px;
+
+}
+
+
+.button{ 
+	background:url(../images/add.png);
+	height:64px;
+	width:64px; 
+	background-repeat:no-repeat;
+
+	
+}  
+
+
+
+.module2{	
+	padding:20px 15px; 
+}
+
+.button-device{
+	
+	background:url(../images/add.png); 
+	padding-left :77px;
+	text-align : center-left;
+	background-repeat:no-repeat;
+	font-size: 26px;
+    font-weight: bold; 
+	font-family: Karla;
+	font-style: normal; 
+	height:64px;
+	border:none;
+	padding-top:14px;
+	
+}
+
+
+
+ /*  END ROOM */
 
 
 
@@ -881,6 +1135,19 @@ height: 58px;
   }
   .module i{
     font-size: 30px;
-  }
 
+ }
+	 
+	 
 }
+/*room page*/
+
+@media screen and (max-width: 500px) { 
+
+    .module3.img { 
+      width: 700px; 
+    } 
+
+} 
+
+ 
