@@ -19,13 +19,21 @@
 <!-- MAIN NAVBAR (THIS IS WHERE YOU WILL COPY FROM and the footer down below haha) -->
 <nav id="main-nav">
     <div class="container">
-      <img src="./images/sentry.png" alt="Sentry Website Logo" class="logo">
+      <img src="<?php echo URLROOT; ?>/images/sentry.png" alt="Sentry Website Logo" class="logo">
 
       <ul>
-        <li><a href="homepage.html" >Home</a></li>
+        <?php if(isset($_SESSION['user_id'])) :  ?>
+          <li><a href="<?php echo URLROOT; ?>/users/logout">Logout</a></li>
+
+
+        <?php else: ?>
+        <li><a href="<?php echo URLROOT; ?>" >Home</a></li>
         <li><a href="#services" >Services</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="register.html" class="current">Login/Register</a></li>
+        <li><a href="<?php echo URLROOT; ?>/users/register">Login/Register</a></li>
+        <?php endif;  ?>
       </ul>
     </div>
   </nav>
+
+  
