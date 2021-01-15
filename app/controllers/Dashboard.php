@@ -7,14 +7,13 @@ class Dashboard extends Controller {
   }
 
   public function index(){
-    $users = $this->userModel->getUsers();
+   
 
     $data = [
-      'title' => 'Welcome',
-      'users' => $users
+      'title' => 'Welcome'
     ];
 
-    $this->view('dashboard/dashboard', $data);
+    $this->view('dashboard/index', $data);
   }
 
 
