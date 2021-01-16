@@ -53,8 +53,16 @@
 				return false;
 			}
 			
-		
-		
       }
 
+      public function getUser($id)
+      {
+        $this->db->query("SELECT * FROM user WHERE USER_ID = :id"); 
+        $this->db->bind(':id', $id);
+        $row = $this->db->single();
+        return $row;
+
+      }
+
+ 
   }
