@@ -13,7 +13,7 @@ require_once 'helpers/session.php';
 // require_once 'libraries/controller.php';
 // require_once 'libraries/database.php';
 
-// autoload core libraries
+//autoload core libraries
 spl_autoload_register(function($className)
 {
   require_once 'libraries/' . $className . '.php';

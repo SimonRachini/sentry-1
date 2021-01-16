@@ -1,0 +1,53 @@
+<?php
+  class Room {
+    private $db;
+
+    public function __construct(){
+      $this->db = new Database;
+    }
+
+  public function addRoom($data){
+
+ $stmt1 = $this->db->query('INSERT INTO room (ROOM_ID, ROOM_NAME, FK_USER_ID) VALUES (:room_id, :room_name, :user_id)');
+
+  // Bind values
+  $this->db->bind(':room_id', $data['room_id']);
+  $this->db->bind(':room_name', $data['room_name']);
+  $this->db->bind(':user_id', $data['user_id']);
+
+  
+      // Execute
+      if($this->db->execute()){
+        $this->db->query('INSERT INTO device (DEVICE_ID, DEVICE_NAME, DEVICE_STATUS, FK_ROOM_ID) VALUES (:device_id, :device_name, :device_status, :room_id)');
+
+        $this->db->bind(':device_id', $data['device_id']);
+        $this->db->bind(':device_name', $data['device_name']);
+        $this->db->bind(':device_status', $data['device_status']);
+        $this->db->bind(':room_id', $data['room_id']);
+
+        if($this->db->execute()){
+          return true;
+        } else{
+          return false;
+        }
+
+        return true;
+      } else {
+        return false;
+      }
+
+}
+
+  public function getRooms($id){
+    $this->db->query("SELECT * FROM room 
+                      INNER JOIN user 
+                      ON room.FK_USER_ID = user.USER_ID
+                      WHERE  FK_USER_ID = :id");
+
+    $this->db->bind(':id', $id);
+   
+      $results = $this->db->resultSet();
+
+      return $results;
+  }
+}
