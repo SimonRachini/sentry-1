@@ -109,6 +109,51 @@ public function login(){
 
 }
 
+public function setting(){
+   
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+        $data = [
+
+            'fname' => test_input($_POST["fname"]),
+            'lname' => test_input($_POST["lname"]),
+            'email' => test_input($_POST["email"]),
+            'number' => test_input($_POST["number"]),
+            'address' => test_input($_POST["address"]),
+            'dnumber' => $_POST["dnumber"],
+            'user_id' => $_SESSION['user_id']
+      
+        ];
+        
+       
+          
+        if($this->userModel->upUser($data['fname'],$data['lname'],$data['email'],$data['number'],$data['address'],$data['user_id'])){
+            if($this->userModel->upECUser($data['dnumber'],$data['user_id'])){
+                redirect('dashboard');
+            } else{
+                die("Something went wrong");
+            }
+        } else {
+            $this->view('dashboard/setting');
+        }
+        
+
+} else{
+
+    $user = $this->userModel->getUser($_SESSION['user_id']);
+    $ec = $this->userModel->getEC($_SESSION['user_id']);
+
+    $data = [
+            'user' => $user,
+            'ec' => $ec
+      
+        ];
+
+        $this->view('dashboard/setting', $data);
+}
+}
+
 public function userSession($user){
 
     $_SESSION['user_id']= $user->USER_ID;
@@ -122,5 +167,7 @@ public function logout(){
 
     redirect('users/login');
 }
+
+
 
 }
