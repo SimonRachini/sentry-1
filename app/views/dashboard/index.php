@@ -17,7 +17,7 @@
   <br>
   <li>--------</li>
     <li><a href="<?php echo URLROOT; ?>/rooms/newroom">Add New Room</a></li>
-    <li><a href="Setting.html">Settings</a></li>
+    <li><a href="<?php echo URLROOT; ?>/users/setting">Settings</a></li>
     </div>
 
 
