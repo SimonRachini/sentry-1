@@ -11,7 +11,7 @@
  define('APPROOT', dirname(dirname(__FILE__)));
 
 //url ROOT
-define('URLROOT', 'http://localhost:8080/sentry-1-main');
+define('URLROOT', 'https://localhost/sentry-1');
 
 //Site name
 define('SITENAME', 'Sentry');

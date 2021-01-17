@@ -531,6 +531,10 @@ label[type = f_name ] {
 
 /*End of Login, Registration.html*/
 /*Setting.html*/
+#changepassword{
+
+  display: block;
+}
  #set-profile .set-profile-form {
    max-width: 500px;
    margin-left: 25%;

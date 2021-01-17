@@ -40,7 +40,25 @@
       }
     }
     
+    public function checkPassword($id,$password){
 
+        $this->db->query("SELECT * FROM user WHERE USER_ID = :id"); 
+        $this->db->bind(':id', $id);
+        $row = $this->db->single();
+
+        $password=md5($password);
+        $db_password = $row->USER_PASSWORD;
+
+			if($password == $db_password){
+        return true;
+      } else {
+        return false;
+      }
+
+    }
+
+
+  
     public function checkEmail($email){
 		$this->db->query("SELECT * FROM user WHERE email = :EMAIL");
 		$this->db->bind(':EMAIL', $email);
@@ -67,8 +85,8 @@
 
       public function getEC($id){
       $this->db->query("select PHONE_NUM 
-      from emergency_contact
-      where USER_USER_ID= :id"); 
+      from user
+      where USER_ID= :id"); 
 
       $this->db->bind(':id', $id);
       $row = $this->db->single();
@@ -92,7 +110,7 @@
        }
 
        public function upECUser($ecnumber,$id){
-        $this->db->query("update emergency_contact set PHONE_NUM= :ecnumber where USER_USER_ID= :id");
+        $this->db->query("update user set PHONE_NUM= :ecnumber where USER_ID= :id");
 
         $this->db->bind(':ecnumber', $ecnumber);
         $this->db->bind(':id', $id);
@@ -102,4 +120,17 @@
           return false;
          }
        }
+
+       public function upPassword($password,$id){
+        $this->db->query("update user set USER_PASSWORD= :password where USER_ID= :id");
+        $password=md5($password);
+        $this->db->bind(':password', $password);
+        $this->db->bind(':id', $id);
+         if($this->db->execute()){
+           return true;
+         } else {
+          return false;
+         }
+       }
+  
   }

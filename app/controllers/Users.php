@@ -122,6 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             'number' => test_input($_POST["number"]),
             'address' => test_input($_POST["address"]),
             'dnumber' => $_POST["dnumber"],
+            'password' =>  $_POST["password"],
             'user_id' => $_SESSION['user_id']
       
         ];
@@ -130,6 +131,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
           
         if($this->userModel->upUser($data['fname'],$data['lname'],$data['email'],$data['number'],$data['address'],$data['user_id'])){
             if($this->userModel->upECUser($data['dnumber'],$data['user_id'])){
+                if($this->userModel->upPassword($data['password'],$data['user_id'])){
+                    redirect('dashboard');
+                } else{
+                    die("Something went wrong");
+                }
                 redirect('dashboard');
             } else{
                 die("Something went wrong");

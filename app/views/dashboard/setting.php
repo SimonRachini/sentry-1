@@ -23,8 +23,12 @@
       <div class="container">
         <div class="set-profile-form">
           <h1>Settings</h1>
-		  <h2>Profile</h2>
+      <h2>Profile</h2>
+     
+  
+    
           <form action="<?php echo URLROOT;?>/users/setting" method="POST">
+          
             <label for="set-name">Full Name</label>
             <input type="name" name="fname" id="first-name" placeholder="Emma" value="<?php echo $data['user']->FIRST_NAME ?>" required/>
 			<input type="name" name="lname" id="last-name" placeholder="Watson" value="<?php echo $data['user']->LAST_NAME ?>"required/>
@@ -36,8 +40,19 @@
             <input type="text" name="address" id="house-address" placeholder = "5 rue Dejean, Boulevard,75002"value="<?php echo $data['user']->ADDRESS ?>"required/>
 			<label for="new-device" >Emergengy Contact</label>
             <input type="text" name="dnumber" id="emergency-contact" placeholder = "+33 7 12 34 53 2" value="<?php echo $data['ec']->PHONE_NUM ?>"required/>
-<br><br>
-            <input type="submit" value="Save" >ß
+
+            <div id="changepassword">
+            <label for="new-device" >New Password</label>
+            <input type="password" name="password" id="password" placeholder = "new password" />
+
+            <label for="new-device" >Validate New Password
+            <input type="password" name="psw-repeat" id="psw-repeat" placeholder = "new password" onkeyup='check();'  />
+            <span id='message'>
+              <br>
+              </label>
+            </div>
+        <br><br>
+            <input type="submit" value="Save" >
             
           </form>
 
@@ -46,5 +61,5 @@
         </div>
       </div>
     </section>
-
+   
     <?php require APPROOT . '/views/inc/footer.php'; ?>
