@@ -12,7 +12,7 @@
 
 //url ROOT
 //define('URLROOT', 'https://localhost/sentry-1');
-define('URLROOT', 'http://localhost/sentry');
-
+//define('URLROOT', 'http://localhost/sentry');
+define('URLROOT', 'http://localhost/sentry-main');
 //Site name
 define('SITENAME', 'Sentry');
