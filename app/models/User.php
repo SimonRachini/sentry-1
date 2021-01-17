@@ -65,7 +65,7 @@
       }
 
 
-      public function getEC($id){
+      /*public function getEC($id){
       $this->db->query("select PHONE_NUM 
       from emergency_contact
       where USER_USER_ID= :id"); 
@@ -73,16 +73,17 @@
       $this->db->bind(':id', $id);
       $row = $this->db->single();
       return $row;
-      }
+      }*/
 
-      public function upUser($fname,$lname,$email,$number,$address,$id){
-        $this->db->query("update user set FIRST_NAME=:fname,LAST_NAME=:lname,EMAIL=:email,PHONE_NUM=:number,ADDRESS=:address where USER_ID=:id");
+      public function upUser($fname,$lname,$email,$number,$address,$dnumber,$id){
+        $this->db->query("update user set FIRST_NAME=:fname,LAST_NAME=:lname,EMAIL=:email,PHONE_NUM=:number,ADDRESS=:address,EC_PHONE_NUM=:dnumber where USER_ID=:id");
 
         $this->db->bind(':fname', $fname);
         $this->db->bind(':lname', $lname);
         $this->db->bind(':email', $email);
         $this->db->bind(':number', $number);
         $this->db->bind(':address', $address);
+        $this->db->bind(':dnumber', $dnumber);
         $this->db->bind(':id', $id);
          if($this->db->execute()){
            return true;
@@ -91,7 +92,7 @@
          }
        }
 
-       public function upECUser($ecnumber,$id){
+       /*public function upECUser($ecnumber,$id){
         $this->db->query("update emergency_contact set PHONE_NUM= :ecnumber where USER_USER_ID= :id");
 
         $this->db->bind(':ecnumber', $ecnumber);
@@ -101,5 +102,5 @@
          } else {
           return false;
          }
-       }
+       }*/
   }

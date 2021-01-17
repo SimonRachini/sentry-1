@@ -3,21 +3,16 @@
 
   <!--left navigational bar-->
   <div class="left_nav">
-    <i class="fas fa-home fa-4x"></i>
-    <li>Emma's Home</li>
-    <br>
-    <li><a href="#Profile">Profile</a></li>
-    <li><a href="#Devices">Devices</a></li>
-    <li><a href="#Sensors">Sensors</a></li>
-    <li><a href="#Rooms">Rooms</a></li>
-	<li><a href="#Accounts">Accounts</a></li>
-    <br>
-    <br>
-	  <li>--------</li>
-      <li><a href="newroom.html">Add New Room</a></li>
-      <li><a href="setting.html">Settings</a></li>
-      </div>
-      </div>
+  <i class="fas fa-home fa-4x"></i>
+  <li><?php echo $data['user']->FIRST_NAME; ?>'s Home</li>
+  <br>
+  <br>
+  <br>
+  <li>--------</li>
+    <li><a href="<?php echo URLROOT; ?>/rooms/newroom">Add New Room</a></li>
+    <li><a href="<?php echo URLROOT; ?>/users/setting">Settings</a></li>
+    </div>
+
 
     <section id="set-profile">
       <div class="container">
@@ -29,20 +24,18 @@
             <input type="name" name="fname" id="first-name" placeholder="Emma" value="<?php echo $data['user']->FIRST_NAME ?>" required/>
 			<input type="name" name="lname" id="last-name" placeholder="Watson" value="<?php echo $data['user']->LAST_NAME ?>"required/>
             <label for="new-device">Email Address</label>
-            <input type="text" name="email" id="email-address" placeholder ="ewatson@gmail.com" value="<?php echo $data['user']->EMAIL ?>"required/>
+            <input type="email" name="email" id="email-address" placeholder ="ewatson@gmail.com" value="<?php echo $data['user']->EMAIL ?>"required/>
             <label for="new-device">Phone Number</label>
             <input type="text" name="number" id="p-number" placeholder = "33 7 12 34 53 2" value="<?php echo $data['user']->PHONE_NUM ?>"required/>
 			<label for="new-device">House Address</label>
             <input type="text" name="address" id="house-address" placeholder = "5 rue Dejean, Boulevard,75002"value="<?php echo $data['user']->ADDRESS ?>"required/>
 			<label for="new-device" >Emergengy Contact</label>
-            <input type="text" name="dnumber" id="emergency-contact" placeholder = "+33 7 12 34 53 2" value="<?php echo $data['ec']->PHONE_NUM ?>"required/>
+            <input type="text" name="dnumber" id="emergency-contact" placeholder = "+33 7 12 34 53 2" value="<?php echo $data['user']->EC_PHONE_NUM ?>"required/>
 <br><br>
-            <input type="submit" value="Save" >ß
+            <input type="submit" value="Save" >
             
           </form>
-
-       
-          
+         
         </div>
       </div>
     </section>
