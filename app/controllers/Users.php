@@ -139,27 +139,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                 redirect('dashboard');
             } else{
                 die("Something went wrong");
-            }
-        } else {
-            $this->view('dashboard/setting');
-        }
+                $this->view('dashboard/setting');
+           }
         
 
 } else{
 
     $user = $this->userModel->getUser($_SESSION['user_id']);
-    $ec = $this->userModel->getEC($_SESSION['user_id']);
 
     $data = [
             'user' => $user,
-            'ec' => $ec
       
         ];
 
         $this->view('dashboard/setting', $data);
 }
 }
-
+}
 public function userSession($user){
 
     $_SESSION['user_id']= $user->USER_ID;
