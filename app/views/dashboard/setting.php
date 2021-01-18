@@ -34,9 +34,8 @@
 			<label for="new-device">House Address</label>
             <input type="text" name="address" id="house-address" placeholder = "5 rue Dejean, Boulevard,75002"value="<?php echo $data['user']->ADDRESS ?>"required/>
 			<label for="new-device" >Emergengy Contact</label>
-<<<<<<< HEAD
             <input type="text" name="dnumber" id="emergency-contact" placeholder = "+33 7 12 34 53 2" value="<?php echo $data['ec']->PHONE_NUM ?>"required/>
-
+            <input type="text" name="dnumber" id="emergency-contact" placeholder = "+33 7 12 34 53 2" value="<?php echo $data['user']->EC_PHONE_NUM ?>"required/>
             <div id="changepassword">
             <label for="new-device" >New Password</label>
             <input type="password" name="password" id="password" placeholder = "new password" />
@@ -48,10 +47,8 @@
               </label>
             </div>
         <br><br>
-=======
-            <input type="text" name="dnumber" id="emergency-contact" placeholder = "+33 7 12 34 53 2" value="<?php echo $data['user']->EC_PHONE_NUM ?>"required/>
+            
 <br><br>
->>>>>>> b40a39a5fd74231f23af0ceeea51b0193bffd66e
             <input type="submit" value="Save" >
             
           </form>

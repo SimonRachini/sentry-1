@@ -9,8 +9,6 @@ var check = function() {
       document.getElementById('message').innerHTML = 'not matching';
     }
   }
-<<<<<<< HEAD
-=======
 
 
   function sendEmail(){
@@ -56,4 +54,3 @@ var check = function() {
       return true;
     }
   }
->>>>>>> b40a39a5fd74231f23af0ceeea51b0193bffd66e
